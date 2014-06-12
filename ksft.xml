@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ksft major='1' minor='1'>
+  <header/>
+  <trailer/>
+  <messages>
+    <message msgcode="1">
+      <field name="Code" required="Y">
+
+    <message>
+  </messages>
+</ksft>
