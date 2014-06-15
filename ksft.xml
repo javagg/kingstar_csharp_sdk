@@ -1,11 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ksft major='1' minor='1'>
-  <header/>
+  <header>
+    <type/>
+	<source>
+	<reqno>
+  </header>
   <trailer/>
   <messages>
     <message msgcode="1">
       <field name="Code" required="Y">
-
     <message>
   </messages>
+  <fields>
+    <field number='395' name='HandlInst' type='CHAR' description="What" />
+  </fields>
+  <dictionaries>
+    <dictionary name="buysellmark" description="买卖标记" canempty="false">
+	  <enum value="0" description="买入">
+	  <enum value="1" description="卖出">
+	</dictionary>
+	<dictionary name="openclosemark" description="开平仓标志">
+	  <enum value="0" description="开仓">
+	  <enum value="1" description="平仓">
+    </dictionary>
+  </dictionaries>
 </ksft>
