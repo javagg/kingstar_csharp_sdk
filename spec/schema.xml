@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='utf-8'?>
+<schema major='1' minor='1'>
+ 
+  <headers>
+
+  <header type="Normal">
+    <field name="FunctionCode"/>
+    <field name="BranchCode"/>
+    <field name="DelegateType"/>
+    <field name="UserId"/>
+    <field name="Password"/>
+  </header>
+
+  <header type="Error">
+    <field name="ErrorMark"/>
+    <field name="ErrorCode"/>
+    <field name="ErrorContent"/>
+  </header>
+
+</headers>
+  <trailer/>
+  <messages>
+   <message functioncode="0" name="LastMessageRequest" description="读后续包" >
+     <header type="Normal"/>
+
+   </message>
+
+    <message functioncode="-1" name="ErrorResponse" description="出错返回包" >
+     <header type="Error"/>
+    </message>
+
+    <message functioncode="6011" name="UserLogin" description="客户登陆" >
+      <field name="FunctionCode" required="Y"/>
+    </message>
+    <message functioncode="6012" name="AccountBalanceQuery" description="交易资金状况查询" />
+    <message functioncode="6013" name="AccountBalanceQuery" description="当日成交明细查询" />
+    <message functioncode="6053" name="AccountBalanceQuery" description="历史成交明细查询" />
+    <message functioncode="6014" name="" description="持仓汇总查询" />
+    <message functioncode="6016" name="AccountBalanceQuery" description="出入金查询" />
+    <message functioncode="6017" name="AccountBalanceQuery" description="行情查询" />
+    <message functioncode="6018" name="AccountBalanceQuery" description="合约查询" />
+    <message functioncode="6019" name="AccountBalanceQuery" description="委托单查询" />
+    <message functioncode="6020" name="AccountBalanceQuery" description="委托单状态查询" />
+    <message functioncode="6021" name="AccountBalanceQuery" description="委托" />
+    <message functioncode="6022" name="AccountBalanceQuery" description="撤单" />
+    <message functioncode="6023" name="AccountBalanceQuery" description="密码修改" />
+    <message functioncode="6029" name="AccountBalanceQuery" description="交易中心代码查询" />
+    <message functioncode="6030" name="AccountBalanceQuery" description="交易日期查询" />
+    <message functioncode="6031" name="AccountBalanceQuery" description="营业部名称查询" />
+    <message functioncode="6034" name="AccountBalanceQuery" description="平仓策略查询" />
+    <message functioncode="6035" name="AccountBalanceQuery" description="当日开盘前的持仓明细查询" />
+    <message functioncode="6036" name="AccountBalanceQuery" description="当日开盘前得组合持仓明细查询" />
+    <message functioncode="6038" name="AccountBalanceQuery" description="交易所信息查询" />
+ 
+
+    <message functioncode="6040" name="AccountBalanceQuery" description="客户交易编码查询" />
+    <message functioncode="6041" name="AccountBalanceQuery" description="银期转账" />
+    <message functioncode="6042" name="AccountBalanceQuery" description="客户银行账号查询" />
+    <message functioncode="6043" name="AccountBalanceQuery" description="转账记录查询" />
+    <message functioncode="6044" name="AccountBalanceQuery" description="最大可开仓手数查询" />
+    <message functioncode="6068" name="AccountBalanceQuery" description="最大可平仓手数查询" />
+    <message functioncode="6045" name="AccountBalanceQuery" description="客户信息查询" />
+    <message functioncode="6052" name="AccountBalanceQuery" description="银期可提现金查询" />
+    <message functioncode="6055" name="AccountBalanceQuery" description="客户可提现金查询" />
+    <message functioncode="6056" name="AccountBalanceQuery" description="监控中心密钥信息查询" />
+    <message functioncode="6025" name="AccountBalanceQuery" description="追保强平结束语句查询" />
+    <message functioncode="6026" name="AccountBalanceQuery" description="交易结算参数查询" />
+    <message functioncode="6127" name="AccountBalanceQuery" description="客户费率查询" />
+    <message functioncode="6128" name="AccountBalanceQuery" description="席位费率查询" />
+    <message functioncode="6071" name="AccountBalanceQuery" description="日结账单确认" />
+    <message functioncode="6072" name="AccountBalanceQuery" description="结账单下载" />
+    <message functioncode="6061" name="AccountBalanceQuery" description="客户登出" />
+    <message functioncode="6089" name="AccountBalanceQuery" description="确认交易通知" />
+    <message functioncode="6090" name="AccountBalanceQuery" description="交易通知查询" />
+    <message functioncode="6091" name="AccountBalanceQuery" description="客户通知查询" />
+    <message functioncode="6092" name="AccountBalanceQuery" description="交割单信息查询" />
+    <message functioncode="6101" name="AccountBalanceQuery" description="交易所组合下单" />
+    <message functioncode="6102" name="AccountBalanceQuery" description="交易所组合撤单" />
+    <message functioncode="6103" name="AccountBalanceQuery" description="订单类型查询" />
+    <message functioncode="6104" name="AccountBalanceQuery" description="组合策略查询" />
+    <message functioncode="6105" name="AccountBalanceQuery" description="组合合约查询" />
+    <message functioncode="6106" name="AccountBalanceQuery" description="组合持仓汇总查询" />
+    <message functioncode="6107" name="AccountBalanceQuery" description="组合委托单查询" />
+    <message functioncode="6108" name="AccountBalanceQuery" description="组合可开可平手数查询" />
+    <message functioncode="6129" name="AccountBalanceQuery" description="手续费率查询" />
+    <message functioncode="6130" name="AccountBalanceQuery" description="保证金率查询" />
+    <message functioncode="6131" name="AccountBalanceQuery" description="多笔撤单" />
+    <message functioncode="6132" name="AccountBalanceQuery" description="组合多笔撤单" />
+    <message functioncode="6151" name="AccountBalanceQuery" description="持仓明细查询" />
+    <message functioncode="6152" name="AccountBalanceQuery" description="组合持仓明细查询" />
+    <message functioncode="6153" name="AccountBalanceQuery" description="指数品种查询" />
+    <message functioncode="6251" name="AccountBalanceQuery" description="期权非交易查询" />
+    <message functioncode="6252" name="AccountBalanceQuery" description="期权非交易申请查询" />
+    <message functioncode="6253" name="AccountBalanceQuery" description="期权可行权数量查询" />
+    <message functioncode="6254" name="OptionInquiry" description="期权询价" />
+    <message functioncode="6256" name="OptionInquiry" description="期权相关参数查询" />
+    <message functioncode="6257" name="OptionInquiry" description="非交易委托单查询" />
+    <message functioncode="6258" name="OptionInquiry" description="全部合约相关信息查询" />
+    <message functioncode="6259" name="OptionInquiry" description="指定合约相关信息查询" />
+
+    <message functioncode="8002" name="OptionInquiry" description="委托回报" />
+    <message functioncode="8003" name="OptionInquiry" description="撤单回报" />
+    <message functioncode="8008" name="OptionInquiry" description="成交回报" />
+    <message functioncode="8009" name="OptionInquiry" description="交易所状态变化" />
+    <message functioncode="8010" name="OptionInquiry" description="信息发布" />
+    <message functioncode="8011" name="OptionInquiry" description="组合合约变更通知" />
+    <message functioncode="8012" name="OptionInquiry" description="组合委托回报" />
+    <message functioncode="8013" name="OptionInquiry" description="组合撤单回报" />
+    <message functioncode="8022" name="OptionInquiry" description="期权非交易申请回报" />
+    <message functioncode="8023" name="OptionInquiry" description="期权非交易申请撤销回报" />
+
+    <message functioncode="6251" name="OptionInquiry" description="个股期权非交易申请" />
+    <message functioncode="6252" name="OptionInquiry" description="个股期权非交易申请撤销" />
+    <message functioncode="6253" name="OptionInquiry" description="个股期权可非交易申请数量查询" />
+    <message functioncode="6256" name="OptionInquiry" description="个股期权相关参数查询" />
+    <message functioncode="6257" name="OptionInquiry" description="个股期权非交易委托单查询" />
+    <message functioncode="6260" name="OptionInquiry" description="个股期权手续费率查询" />
+    <message functioncode="6261" name="OptionInquiry" description="个股期权保证金率查询" />
+    <message functioncode="6262" name="OptionInquiry" description="个股行权指派信息查询" />
+    <message functioncode="6161" name="OptionInquiry" description="个股期权限购额度查询 " />
+    <message functioncode="6162" name="OptionInquiry" description="个股期权交易级别查询" />
+    <message functioncode="6163" name="OptionInquiry" description="个股期权特殊限仓额度查询 " />
+
+    <message functioncode="8009" name="OptionInquiry" description="系统状态变化" />
+    <message functioncode="8022" name="OptionInquiry" description="个股期权非交易申请回报" />
+    <message functioncode="8023" name="OptionInquiry" description="个股期权非交易申请撤销回报" />
+
+  </messages>
+  <fields>
+    <field name="[Reserved]" description="保留" />
+    <field name="FunctionCode" description="功能号" />
+    <field name="BranchCode" description="营业部代码" />
+    <field name="DelegateType" description="委托方式" />
+    <field name="UserId" description="客户号" />
+    <field name="Password" description="客户密码" />
+    <field name="LocalTradeIdBegin" description="起始本地成交单号" />
+    <field name="LocalTradeIdEnd" description="结束本地成交单号" />
+    <field name="TransactionType" description="交易类别" />
+
+    <field number='395' name='HandlInst' type='CHAR' description="What" />
+  </fields>
+  <dictionaries>
+    <dictionary name="buysellmark" description="买卖标记" canempty="false">
+	  <enum value="0" description="买入">
+	  <enum value="1" description="卖出">
+	</dictionary>
+	<dictionary name="openclosemark" description="开平仓标志">
+	  <enum value="0" description="开仓">
+	  <enum value="1" description="平仓">
+    </dictionary>
+  </dictionaries>
+</schema>
