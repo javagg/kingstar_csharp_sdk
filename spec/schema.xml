@@ -137,6 +137,77 @@
     <field name="LocalTradeIdEnd" description="结束本地成交单号" />
     <field name="TransactionType" description="交易类别" />
 
+	<field description="操作员号" />
+	<field description="客户号" />	
+	<field description="委托号" />
+	<field description="交易所代码" />	
+	<field description="合约编码" />
+	<field description="非交易委托单状态代码" />	
+	<field description="投保标志" />
+	<field description="申请数量" />	
+	<field description="系统号" />
+	<field description="合约账户" />	
+	<field description="委托时间" />
+	<field description="申报时间" />	
+	<field description="委托方式" />
+	<field description="撤单操作员" />	
+	<field description="撤单时间" />
+	<field description="席位号" />	
+	<field description="币种" />
+
+	<field description="保留" />
+	
+	<field description="修改批次" />
+	<field description="备注" />	
+	<field description="下单席位" />
+	<field description="本地标记" />	
+	<field description="私有信息" />
+	<field description="私有标识" />	
+	<field description="私有流水号" />
+	<field description="行权冻结保证金" />	
+	<field description="行权冻结手续费" />
+	<field description="非交易申请类型" />	
+	<field description="买卖标志" />
+	<field description="是否保留头寸" />	
+	<field description="是否免于对冲" />
+
+
+    <field description="交易编码" />
+	<field description="强平标志" />	
+	<field description="未成交手数" />
+	<field description="成交手数" />
+    <field description="成交价格（价差）" />
+	<field description="申报手数" />	
+	<field description="申报价格" />
+	<field description="策略代码" />
+    <field description="定单类型" />
+	<field description="成交属性" />	
+	<field description="组合类型" />
+	<field description="组合买卖" />
+    <field description="组合开平" />
+	<field description="组合投保" />	
+	<field description="合约编码1" />
+	<field description="合约编码2" />
+    <field description="合约编码3" />
+	<field description="合约编码4" />	
+	
+	
+	<field description="用户号" />
+	<field description="发送者" />
+	<field description="信息类型" />
+	<field description="日期" />
+	<field description="摘要" />
+	
+	<field description="交易所成交号" />
+	<field description="组合成交均价" />
+	<field description="组合剩余量" />
+	<field description="组合成交量" />
+	<field description="最小成交数量" />
+	<field description="触发时间（非空：交易所盈损单触发回报）" />
+
+	
+	
+	
     <field number='395' name='HandlInst' type='CHAR' description="What" />
   </fields>
   <dictionaries>
