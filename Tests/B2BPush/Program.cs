@@ -79,16 +79,22 @@ namespace B2BPush
             client = new TcpClient(ip, port);
             stream = client.GetStream();
 
-//            byte[] buffer = new Byte[1024];
-//            byte[] message = new Byte[4096];
-//            Thread t = new Thread(new ThreadStart(() =>
-//                    {
-//                        Console.WriteLine("Start Receiving...");    
-//                        int readCount = 0;
-//                        int position = 0;
+            byte[] buffer = new Byte[1024];
+            byte[] message = new Byte[1024];
+            new Thread(new ThreadStart(() =>
+            {
+                Console.WriteLine("Start Receiving...");
+                    int readCount = 0;
+                    int position = 0;
 //
-//                        do
-//                        {
+                    while (true)
+                        {
+                            readCount = stream.Read(buffer, 0, buffer.Length);
+                            Buffer.BlockCopy(buffer, 0, message, position, readCount);
+                            position += readCount;
+                        }
+                    do
+                        {
 //                            readCount = stream.Read(buffer, 0, buffer.Length);
 //                            Console.WriteLine("Receiving some data... {0}", readCount);    
 //                            buffer.CopyTo(message, position);
@@ -100,10 +106,9 @@ namespace B2BPush
 //                                Console.WriteLine(msg);
 //                                position = 0;
 //                            }
-//                        }
-//                        while(stream.DataAvailable);
-//                    }));
-//            t.Start();
+                         }
+                       while(stream.DataAvailable);
+              })).Start();
 //
 //            MessageHead connectMsg = new MessageHead();
 //            connectMsg.Type = (ushort)IPAddress.HostToNetworkOrder((short)1);
@@ -115,16 +120,16 @@ namespace B2BPush
 //            t.Join();         
 //            Console.WriteLine("Done!");
 
-			Byte[] data = {0,1,0,0};
-			stream.Write(data, 0, data.Length);
-			Console.WriteLine("Sent: {0} {1} {2} {3}", data[0],data[1],data[2],data[3] );  
-			Byte[] data1 = new Byte[128];
-			Thread.Sleep (10);
-			//	String received = String.Empty;
-			int bytes = stream.Read(data1, 0, data1.Length);
-			Console.WriteLine("length: {0}", bytes);  
-			//received = Encoding.GetEncoding("gbk").GetString(data, 0, bytes);
-			Console.WriteLine("Received: {0} {1} {2} {3}", data1[0],data1[1],data1[2],data1[3] );  
+            Byte[] data = { 0, 1, 0, 0 };
+            stream.Write(data, 0, data.Length);
+            Console.WriteLine("Sent: {0} {1} {2} {3}", data[0], data[1], data[2], data[3]);  
+            Byte[] data1 = new Byte[128];
+            Thread.Sleep(10);
+            //	String received = String.Empty;
+            int bytes = stream.Read(data1, 0, data1.Length);
+            Console.WriteLine("length: {0}", bytes);  
+            //received = Encoding.GetEncoding("gbk").GetString(data, 0, bytes);
+            Console.WriteLine("Received: {0} {1} {2} {3}", data1[0], data1[1], data1[2], data1[3]);  
         }
 
         public static MessageHead FromBytes(byte[] buf)
